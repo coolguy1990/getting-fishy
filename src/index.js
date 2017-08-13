@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { Match, Miss} from 'react-router';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './css/style.css';
 import App from './App';
