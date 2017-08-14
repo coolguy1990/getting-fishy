@@ -1,6 +1,5 @@
 import React from 'react';
 import { getFunName } from '../utils/helpers';
-import { Redirect } from 'react-router-dom';
 
 class StorePicker extends React.Component {
     goToStore(event) {
