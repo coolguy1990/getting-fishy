@@ -11,8 +11,8 @@ const Root = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={StorePicker} />
-                <Route path="/store/:storeId" component={App} />
+                <Route exact path="/getting-fishy/" component={StorePicker} />
+                <Route path="/getting-fishy/store/:storeId" component={App} />
                 <Route component={NotFound} />
             </Switch>            
         </BrowserRouter>
