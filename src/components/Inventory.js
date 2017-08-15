@@ -29,11 +29,8 @@ class Inventory extends React.Component {
 
     handleChange(event, key){
         const fish = this.props.fishes[key];
-
-        const updatedFish = {
-            ...fish,
-            [event.target.name]: [event.target.value]
-        };
+        const updatedFish = {...fish};
+        updatedFish[event.target.name] = event.target.value;
 
         this.props.updateFish(key, updatedFish);
     }
@@ -123,7 +120,7 @@ class Inventory extends React.Component {
             <div className="fish-edit" key={key}>
                 <input onChange={(e) => this.handleChange(e, key)} type="text" name="name" value={fish.name} placeholder="Fish Name"/>
                 <input onChange={(e) => this.handleChange(e, key)} type="text" name="price" value={fish.price} placeholder="Fish Price"/>
-                <select onChange={(e) => this.handleChange(e, key)} name="status" value={fish.status}>
+                <select type="text" onChange={(e) => this.handleChange(e, key)} name="status" value={fish.status}>
                     <option value="available">Fresh!!</option>
                     <option value="unavailable">Sold Out!!</option>
                 </select>
