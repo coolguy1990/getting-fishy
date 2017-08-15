@@ -2,6 +2,7 @@
   "name": "fishpicker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://coolguy1990.github.io/getting-fishy",
   "dependencies": {
     "prop-types": "^15.5.10",
     "re-base": "^3.0.3",
@@ -16,10 +17,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
+    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "autoprefixer-stylus": "^0.14.0",
+    "gh-pages": "^1.0.0",
     "stylus": "^0.54.5"
   }
 }
